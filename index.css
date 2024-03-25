@@ -123,14 +123,14 @@ h1 span{
     background-repeat: no-repeat;
     -webkit-background-clip: text;
     background-position: -41rem 0;
-}
-
-.home.show-animate .home-content .text-animate h3{
     animation: homeBgText 6s linear infinite;
     animation-delay: 2s;
 }
 
-.home-content .text-animate::before{
+.home.show-animate .home-content .text-animate h3{
+}
+
+.home-content .text-animate h3::before{
     content: '';
     position: absolute;
     top: 0;
@@ -141,6 +141,10 @@ h1 span{
     z-index: -1;
     animation: homeCursorText 6s linear infinite;
     animation-delay: 2s;
+}
+
+.cursor-reset-animation::before {
+    animation: none ; /* Detiene la animación */
 }
 
 .home-content p{
@@ -722,6 +726,26 @@ form .textarea-field{
     color: var(--main-color);
 }
 
+.error-txt{
+    font-size: 14.5px;
+    color: #d92035;
+    text-align: left;
+    margin: -5px 0 10px;
+    display: none;
+}
+
+.textarea-field .error-txt{
+    margin-top: -10px;
+}
+
+.field.error .item{
+    border-color: #d93025;
+}
+
+.field.error .error-txt{
+    display: block;
+}
+
 /*Animated reload and scroll*/
 
 .animate{
@@ -740,12 +764,12 @@ form .textarea-field{
 
 .logo .animate, .navbar .animate, #menu-icon .animate, .home.show-animate .animate{
     animation: showRights 1s ease forwards;
-    animation-delay: calc(.3s * var(--i));
+    animation-delay: calc(.2s * var(--i));
 }
 
 .animate.scroll{
     transition: 1s ease;
-    transition-delay: calc(.3s / var(--i));
+    transition-delay: calc(.2s / var(--i));
     animation: none;
 }
 
@@ -762,7 +786,7 @@ section:nth-child(odd) .animate.scroll, .footer .animate.scroll{
 .skills.show-animate .animate.scroll,
 .contact.show-animate .animate.scroll,
 .footer.show-animate .animate.scroll{
-    transition-delay: calc(.3s * var(--i));
+    transition-delay: calc(.2s * var(--i));
     width: 0;
 }
 

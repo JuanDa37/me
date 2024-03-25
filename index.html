@@ -21,6 +21,7 @@
       <a href="#about">Acerca de mi</a>
       <a href="#education">Recorrido</a>
       <a href="#skills">Habilidades</a>
+      <a href="#contact">Contacto</a>
       <a href="#works">Proyectos</a>
 
       <span class="active-nav"></span>
@@ -32,32 +33,31 @@
 
   <section class="home show-animate" id="home">
     <div class="home-content">
-      <h1>Hola, soy <span>Juan David</span><span class="animate" style="--i:2;"></span></h1>
+      <h1>Hola, soy <span>Juan David</span><span class="animate  scroll" style="--i:2;"></span></h1>
       <div class="text-animate">
         <h3>Web Design & Developer</h3>
-        <span class="animate" style="--i:3;"></span>
+        <span class="animate scroll" style="--i:3;"></span>
       </div>
       <p>
         Soy Web Design & Developer, aunque me gusta aprender en todas las ramas de la programación más mi enfoque es en
         el desarrollo web. Capacitado en design, developer, bases de datos, herramientas colaborativas y despliegues en
         servidores.
-        <span class="animate" style="--i:4;"></span>
+        <span class="animate scroll" style="--i:4;"></span>
       </p>
       <div class="btn-box">
         <a href="hoja de vida JUAND.pdf" class="btn">Ver HV</a>
         <a href="#about" class="btn">Conoce más</a>
-        <span class="animate" style="--i:5;"></span>
+        <span class="animate scroll" style="--i:5;"></span>
       </div>
-    </div>
-    <div class="home-sci">
-      <a href="https://www.facebook.com/profile.php?id=100072404179106"><i class="bx bxl-facebook"></i></a>
-      <a href="https://www.instagram.com/73juanda/"><i class='bx bxl-instagram'></i></a>
-      <a href="https://www.linkedin.com/in/juan-david-pinz%C3%B3n-villamil-31663a267/"><i
+      <div class="home-sci">
+        <a href="https://www.facebook.com/profile.php?id=100072404179106"><i class="bx bxl-facebook"></i></a>
+        <a href="https://www.instagram.com/73juanda/"><i class='bx bxl-instagram'></i></a>
+        <a href="https://www.linkedin.com/in/juan-david-pinz%C3%B3n-villamil-31663a267/"><i
           class="bx bxl-linkedin"></i></a>
-      <span class="animate" style="--i:6;"></span>
-    </div>
-    <div class="home-imgHover"></div>
-    <span class="animate home-img" style="--i:7;"></span>
+          <span class="animate scroll" style="--i:6;"></span>
+        </div>
+      </div>
+        <div class="home-imgHover"></div>
   </section>
 
   <!--about section design-->
@@ -67,7 +67,7 @@
     <div class="about-img">
       <img src="foto-removebg-preview.png" alt="" />
       <span class="circle-spin"></span>
-      <span class="animate scroll" style="--i:1;"></span>
+      <span class="animate scroll" style="--i:2;"></span>
     </div>
     <div class="about-content">
       <h3>Web Design & Developer<span class="animate scroll" style="--i:3;"></span></h3>
@@ -243,39 +243,45 @@
   </section>
 
   <!--contact section design-->
-  <!---
+  
     <section class="contact" id="contact">
       <h2 class="heading">Contact <span>Me!</span><span class="animate scroll" style="--i:1;"></span></h2>
       <form action="">
         <div class="input-box">
-          <div class="input-field">
-            <input type="text" placeholder="Full Name" required>
+          <div class="input-field field">
+            <input type="text" placeholder="Full Name" id="name" autocomplete="off" class="item" required>
             <span class="focus"></span>
+            <div class="error-txt">Full name can't be blank</div>
           </div>
-          <div class="input-field">
-            <input type="text" placeholder="Email Address" required>
+          <div class="input-field field">
+            <input type="text" placeholder="Email Address" id="email" autocomplete="off"  class="item" required>
             <span class="focus"></span>
+            <div class="error-txt">Email Address can't be blank</div>
           </div>
 
           <span class="animate scroll" style="--i:3;"></span>
 
         </div>
         <div class="input-box">
-          <div class="input-field">
-            <input type="number" placeholder="Mobile Number" required>
+          <div class="input-field field">
+            <input type="number" placeholder="Mobile Number" id="phone" autocomplete="off" class="item" required>
             <span class="focus"></span>
+            <div class="error-txt">Mobile Number can't be blank</div>
           </div>
-          <div class="input-field">
-            <input type="text" placeholder="Email Subject" required>
+          <div class="input-field field">
+            <input type="text" placeholder="Email Subject" id="subject" autocomplete="off" class="item" required>
             <span class="focus"></span>
+            <div class="error-txt email">Subject can't be blank</div>
           </div>
 
           <span class="animate scroll" style="--i:5;"></span>
 
         </div>
-        <div class="textarea-field">
-          <textarea name="" id="" cols="30" rows="10" placeholder="Your Message" required></textarea>
+        <div class="textarea-field field">
+          <textarea name="" cols="30" rows="10" placeholder="Your Message" id="message" autocomplete="off" class="item" required></textarea>
           <span class="focus"></span>
+
+          <div class="error-txt">Message can't be blank</div>
 
           <span class="animate scroll" style="--i:7;"></span>
 
@@ -287,7 +293,7 @@
 
         </div>
       </form>
-    </section>-->
+    </section>
 
   <section class="contact" id="works">
     <h2 class="heading">Mis <span>Proyectos</span><span class="animate scroll" style="--i:1;"></span></h2>
@@ -324,6 +330,9 @@
     </div>
   </footer>
 
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+  <script src="https://smtpjs.com/v3/smtp.js">
+  </script>
   <script src="index.js"></script>
 </body>
 
