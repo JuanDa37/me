@@ -627,6 +627,10 @@ form .textarea-field{
     resize: none;
 }
 
+.work{
+    background: var(--second-bg-color);
+}
+
 .works{
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, auto));
@@ -676,7 +680,7 @@ form .textarea-field{
     align-items: center;
     flex-wrap: wrap;
     padding: 2rem 9%;
-    background: var(--second-bg-color);
+    background: var(--bg-color);
 }
 
 .footer-text, .footer-iconTop{
@@ -773,7 +777,15 @@ form .textarea-field{
     animation: none;
 }
 
-section:nth-child(odd) .animate.scroll, .footer .animate.scroll{
+section:nth-child(odd) .animate.scroll, .work .animate.scroll{
+    background: var(--second-bg-color);
+}
+
+.home{
+    background: var(--bg-color) !important;
+}
+
+.home .animate.scroll, .header .animate.scroll{
     background: var(--second-bg-color);
 }
 
@@ -784,6 +796,7 @@ section:nth-child(odd) .animate.scroll, .footer .animate.scroll{
 .about.show-animate .animate.scroll,
 .education.show-animate .animate.scroll,
 .skills.show-animate .animate.scroll,
+.work.show-animate .animate.scroll,
 .contact.show-animate .animate.scroll,
 .footer.show-animate .animate.scroll{
     transition-delay: calc(.2s * var(--i));
